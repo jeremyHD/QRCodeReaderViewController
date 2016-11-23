@@ -96,7 +96,11 @@
 {
   [_session addOutput:_metadataOutput];
 
-  if (_defaultDeviceInput) {
+  if (_frontDeviceInput) {
+    [_session addInput:_frontDeviceInput];
+  }
+
+  else if (_defaultDeviceInput) {
     [_session addInput:_defaultDeviceInput];
   }
 
